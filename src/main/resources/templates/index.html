@@ -138,10 +138,11 @@
 <div class="row">
 			<div class="col-sm-6 col-md-6 col-lg-3 pt-2"
 				th:each="NewPhone : ${listNewPhone}">
-				<div class="card">
-					<div class="card-body">
+				<div class="card box6">
+								<img th:src="@{'data:image/jpeg;base64,'+${NewPhone.image}}" height="250px" alt=""/>
+					<div class="box-content">
+                            <h3 class="title"th:text="${NewPhone.name}"></h3>
 
-						<h6 th:text="'Nom d apparail :' + ${NewPhone.name}"></h6>
 					
 						<h6 th:text="'Prix :' + ${NewPhone.price}"></h6>
 						<a href="#" class="btn btn-primary">Show more</a>

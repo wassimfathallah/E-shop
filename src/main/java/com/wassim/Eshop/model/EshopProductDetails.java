@@ -15,6 +15,7 @@ public class EshopProductDetails {
 	private float price;
 	private String size;
 	private int qte;
+	
 	public EshopProductDetails() {
 		super();
 		// TODO Auto-generated constructor stub

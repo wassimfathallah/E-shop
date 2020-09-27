@@ -23,7 +23,7 @@
 <style type="text/css">
 .nav-item a:hover {
 	background: #71cd14;
-	color: white;
+	color: red;
 }
 
 /*********************** Demo - 6 *******************/
@@ -161,16 +161,21 @@
 
 
 
-		<form action="#" th:action="@{/saveNewPhone}" th:object="${newPhone}"
-			method="POST">
+		<form action="/saveNewPhone"  method="POST" enctype="multipart/form-data">
 			<div>
-				<input type="hidden" th:field="*{id}" /> 
+				<input type="hidden" name="id" /> 
 				
 				
 
 				<label for="Nom" class="col-sm-2 col-form-label">Nom d'apparail</label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="Nom" th:field="*{name}">
+					<input type="text" class="form-control" id="Nom" name="name">
+				</div>
+
+
+				<label for="Marque" class="col-sm-2 col-form-label">Marque d'apparail</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="marque" name="marque">
 				</div>
 
 				
@@ -179,9 +184,33 @@
 
 				<label for="Prix" class="col-sm-2 col-form-label">Prix</label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="Prix"
-						th:field="*{price}">
+					<input type="number" class="form-control" id="Prix"
+					name="price" required="required">
 				</div>
+
+
+				<label for="color" class="col-sm-2 col-form-label">Coleur d'apparail</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="color" name="color">
+				</div>
+				
+
+				<label for="Size" class="col-sm-2 col-form-label">size d'apparail</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="size" name="size">
+				</div>
+				
+
+
+				<label for="Qte" class="col-sm-2 col-form-label">Quantite d'apparail</label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" id="qte" name="qte" required="required">
+				</div>
+
+  <div class="form-group col-sm-10">
+    <label for="exampleFormControlFile1">Image d'apparail</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file" required="required">
+  </div>
 
 			
 				<div class="col-sm-10" style="text-align: center">
@@ -200,56 +229,6 @@
 
 
 
-
-
-
-<!------------------ Hover Effect Style : Demo - 6 --------------->
-       <div class="container mt-40">
-            <h3 class="text-center">Hover Effect Style : Demo - 6</h3>
-            <div class="row mt-30">
-                <div class="col-md-4 col-sm-6">
-                    <div class="box6">
-                        <img src="http://bestjquery.com/tutorial/hover-effect/demo161/images/img-1.jpg" alt="">
-                        <div class="box-content">
-                            <h3 class="title">Williamson</h3>
-                            <span class="post">Web Developer</span>
-                            <ul class="icon">
-                                <li><a href="#" class="fa fa-search"></a></li>
-                                <li><a href="#" class="fa fa-link"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="box6">
-                        <img src="http://bestjquery.com/tutorial/hover-effect/demo161/images/img-2.jpg" alt="">
-                        <div class="box-content">
-                            <h3 class="title">Kristiana</h3>
-                            <span class="post">Web Designer</span>
-                            <ul class="icon">
-                                <li><a href="#" class="fa fa-search"></a></li>
-                                <li><a href="#" class="fa fa-link"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="box6">
-                        <img src="http://bestjquery.com/tutorial/hover-effect/demo161/images/img-3.jpg" alt="">
-                        <div class="box-content">
-                            <h3 class="title">Kristiana</h3>
-                            <span class="post">Web Designer</span>
-                            <ul class="icon">
-                                <li><a href="#" class="fa fa-search"></a></li>
-                                <li><a href="#" class="fa fa-link"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!------------------ Hover Effect Style : Demo - 7 --------------->
 
 
 
