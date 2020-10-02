@@ -44,5 +44,11 @@ public class EshopController {
 		// productService.createNewPhone(newPhone);
 		return "redirect:/";
 	}
+	@GetMapping("/showProduct/{id}")
+	public String updateProduct(@PathVariable(value = "id") Long id, Model model) {
+		EshopProduct product = productService.getProductById(id);
+		model.addAttribute("product", product);
 
+		return "ProductPage";
+	}
 }

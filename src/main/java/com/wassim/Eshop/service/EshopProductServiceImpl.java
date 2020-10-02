@@ -3,6 +3,7 @@ package com.wassim.Eshop.service;
 import java.io.IOException;
 import java.util.Base64;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,4 +51,21 @@ public class EshopProductServiceImpl implements EshopProductService {
 		
 		return repo.findAll();
 	}
+
+	@Override
+	public EshopProduct getProductById(Long id) {
+		// TODO Auto-generated method stub
+		Optional<EshopProduct> optional= repo.findById(id);
+		EshopProduct product = null;
+		if(optional.isPresent()) {
+			
+			product=optional.get();
+		}else {
+			throw new RuntimeException("Product not found");
+		}
+		return product;
+	}
+	
+	
+
 }
