@@ -27,25 +27,117 @@
 }
 
 /*********************** Demo - 6 *******************/
-.box6{background:#000;position:relative}
-.box6:after{background:rgba(0,0,0,.7);position:absolute;top:0;left:-30%;bottom:0;right:70%;transform:skew(20deg) translateX(-75%)}
-.box6:hover:after{transform:skew(20deg) translateX(0)}
-.box6 img{width:100%;height:auto}
-.box6:hover img{opacity:.5}
-.box6 .box-content{padding:20px;text-align:right;position:absolute;top:0;right:0;z-index:1}
-.box6 .icon,.box7 .icon{padding:0;list-style:none}
-.box10 .icon li a,.box11,.box12,.box13,.box14,.box6 .icon li a,.box7,.box7 .icon li a,.box8,.box8 .icon li a{text-align:center}
-.box6 .title{font-size:20px;font-weight:900;color:#fff;margin:0 0 10px;transform:scale(0)}
-.box6:hover .title{transform:scale(1)}
-.box6 .icon li,.box6 .post{opacity:0;transform:translateX(40px);transition:all .35s ease 0s}
-.box6 .post{display:block;font-size:14px;color:#fff;margin-bottom:5px}
-.box6 .icon{display:inline-block;margin:0}
-.box6:hover .icon li,.box6:hover .post{opacity:1;transform:translateX(0)}
-.box6:hover .icon li:first-child{transition-delay:.1s}
-.box6:hover .icon li:nth-child(2){transition-delay:.2s}
-.box6 .icon li a{display:block;width:35px;height:35px;line-height:35px;background:#fff;font-size:18px;color:#605f5f;margin-bottom:5px;transition:all .35s ease}
-.box6 .icon li a:hover{background:#605f5f;color:#fff}
-@media only screen and (max-width:990px){.box6{margin-bottom:30px}
+.box6 {
+	background: #000;
+	position: relative
+}
+
+.box6:after {
+	background: rgba(0, 0, 0, .7);
+	position: absolute;
+	top: 0;
+	left: -30%;
+	bottom: 0;
+	right: 70%;
+	transform: skew(20deg) translateX(-75%)
+}
+
+.box6:hover:after {
+	transform: skew(20deg) translateX(0)
+}
+
+.box6 img {
+	width: 100%;
+	height: auto
+}
+
+.box6:hover img {
+	opacity: .5
+}
+
+.box6 .box-content {
+	padding: 20px;
+	text-align: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1
+}
+
+.box6 .icon, .box7 .icon {
+	padding: 0;
+	list-style: none
+}
+
+.box10 .icon li a, .box11, .box12, .box13, .box14, .box6 .icon li a,
+	.box7, .box7 .icon li a, .box8, .box8 .icon li a {
+	text-align: center
+}
+
+.box6 .title {
+	font-size: 20px;
+	font-weight: 900;
+	color: #fff;
+	margin: 0 0 10px;
+	transform: scale(0)
+}
+
+.box6:hover .title {
+	transform: scale(1)
+}
+
+.box6 .icon li, .box6 .post {
+	opacity: 0;
+	transform: translateX(40px);
+	transition: all .35s ease 0s
+}
+
+.box6 .post {
+	display: block;
+	font-size: 14px;
+	color: #fff;
+	margin-bottom: 5px
+}
+
+.box6 .icon {
+	display: inline-block;
+	margin: 0
+}
+
+.box6:hover .icon li, .box6:hover .post {
+	opacity: 1;
+	transform: translateX(0)
+}
+
+.box6:hover .icon li:first-child {
+	transition-delay: .1s
+}
+
+.box6:hover .icon li:nth-child(2) {
+	transition-delay: .2s
+}
+
+.box6 .icon li a {
+	display: block;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	background: #fff;
+	font-size: 18px;
+	color: #605f5f;
+	margin-bottom: 5px;
+	transition: all .35s ease
+}
+
+.box6 .icon li a:hover {
+	background: #605f5f;
+	color: #fff
+}
+
+@media only screen and (max-width:990px) {
+	.box6 {
+		margin-bottom: 30px
+	}
 }
 
 /*********************** Demo - 7 *******************/
@@ -161,58 +253,134 @@
 
 
 
-		<form action="/saveNewPhone"  method="POST" enctype="multipart/form-data">
-			<div>
-				<input type="hidden" name="id" /> 
-				
-				
 
-				<label for="Nom" class="col-sm-2 col-form-label">Nom d'apparail</label>
+
+
+
+		<form action="/saveNewPhone" method="POST"
+			enctype="multipart/form-data">
+			<div>
+				<input type="hidden" name="id" /> <label for="Nom"
+					class="col-sm-2 col-form-label">Nom d'apparail</label>
 				<div class="col-sm-10">
 					<input type="text" class="form-control" id="Nom" name="name">
 				</div>
 
 
-				<label for="Marque" class="col-sm-2 col-form-label">Marque d'apparail</label>
+				<label for="Marque" class="col-sm-2 col-form-label">Marque
+					d'apparail</label>
 				<div class="col-sm-10">
 					<input type="text" class="form-control" id="marque" name="marque">
 				</div>
 
-				
+
 
 
 
 				<label for="Prix" class="col-sm-2 col-form-label">Prix</label>
 				<div class="col-sm-10">
-					<input type="number" class="form-control" id="Prix"
-					name="price" required="required">
+					<input type="number" class="form-control" id="Prix" name="price"
+						required="required">
 				</div>
 
 
-				<label for="color" class="col-sm-2 col-form-label">Coleur d'apparail</label>
+				<label for="color" class="col-sm-2 col-form-label">Coleur
+					d'apparail</label>
 				<div class="col-sm-10">
 					<input type="text" class="form-control" id="color" name="color">
 				</div>
-				
 
-				<label for="Size" class="col-sm-2 col-form-label">size d'apparail</label>
+
+				<label for="Size" class="col-sm-2 col-form-label">size
+					d'apparail</label>
 				<div class="col-sm-10">
 					<input type="text" class="form-control" id="size" name="size">
 				</div>
-				
 
 
-				<label for="Qte" class="col-sm-2 col-form-label">Quantite d'apparail</label>
+
+				<label for="Qte" class="col-sm-2 col-form-label">Quantite
+					d'apparail</label>
 				<div class="col-sm-10">
-					<input type="number" class="form-control" id="qte" name="qte" required="required">
+					<input type="number" class="form-control" id="qte" name="qte"
+						required="required">
 				</div>
 
-  <div class="form-group col-sm-10">
-    <label for="exampleFormControlFile1">Image d'apparail</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file" required="required">
-  </div>
 
-			
+
+
+   
+
+				<label for="released" class="col-sm-2 col-form-label">Released</label>
+				<div class="col-sm-10">
+				 <textarea class="form-control" id="released" name="released" rows="3"></textarea>
+				
+<!-- 					<input type="text" class="form-control" id="released" -->
+<!-- 						name="released" required="required"> -->
+				</div>
+
+				<label for="processeur" class="col-sm-2 col-form-label">Processeur
+				</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="processeur"
+						name="processeur" required="required">
+				</div>
+
+
+
+				<label for="Qte" class="col-sm-2 col-form-label">Quantite
+					d'apparail</label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" id="qte" name="qte"
+						required="required">
+				</div>
+
+				<label for="ram" class="col-sm-2 col-form-label">Ram</label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" id="ram" name="ram"
+						required="required">
+				</div>
+
+				<label for="rom" class="col-sm-2 col-form-label">Rom </label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" id="rom" name="rom"
+						required="required">
+				</div>
+
+				<label for="android" class="col-sm-2 col-form-label">Android</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="android" name="android"
+						required="required">
+				</div>
+
+				<label for="battery" class="col-sm-2 col-form-label">Battery
+				</label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" id="battery"
+						name="battery" required="required">
+				</div>
+				<label for="camFrontale" class="col-sm-2 col-form-label">Frontale
+				</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="camFrontale"
+						name="camfrontale" required="required">
+				</div>
+				<label for="camDorsale" class="col-sm-2 col-form-label">Dorsale
+				</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="camDorsale"
+						name="camDorsale" required="required">
+				</div>
+
+
+
+				<div class="form-group col-sm-10">
+					<label for="exampleFormControlFile1">Image d'apparail</label> <input
+						type="file" class="form-control-file" id="exampleFormControlFile1"
+						name="file" required="required">
+				</div>
+
+
 				<div class="col-sm-10" style="text-align: center">
 					<button type="submit" class="btn btn-primary">Poster le
 						produits</button>

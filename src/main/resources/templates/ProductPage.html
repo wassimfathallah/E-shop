@@ -1,67 +1,279 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>E-Shop</title>
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+.nav-item a:hover {
+	background: #69C1FE;
+	color: white;
+	border-radius: 10px;
+}
+
+body {
+	/* 	background-image: */
+	/* 		url("https://i0.wp.com/www.cssscript.com/wp-content/uploads/2017/12/Animated-Particles-Background.png?fit=499%2C386&ssl=1"); */
+	/* 	height: 100%; */
+	
+}
+/*********************** Demo - 6 *******************/
+.box6 {
+	background: #000;
+	position: relative
+}
+
+.box6:after {
+	background: rgba(0, 0, 0, .7);
+	position: absolute;
+	top: 0;
+	left: -30%;
+	bottom: 0;
+	right: 70%;
+	transform: skew(20deg) translateX(-75%)
+}
+
+.box6:hover:after {
+	transform: skew(20deg) translateX(0)
+}
+
+.box6 img {
+	width: 100%;
+	height: auto
+}
+
+.box6:hover img {
+	opacity: .5
+}
+
+.box6 .box-content {
+	padding: 20px;
+	text-align: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	color: white
+}
+
+.box6 .icon, .box7 .icon {
+	padding: 0;
+	list-style: none
+}
+
+.box10 .icon li a, .box11, .box12, .box13, .box14, .box6 .icon li a,
+	.box7, .box7 .icon li a, .box8, .box8 .icon li a {
+	text-align: center
+}
+
+.box6 .title {
+	font-size: 20px;
+	font-weight: 900;
+	margin: 0 0 10px;
+	transform: scale(0)
+}
+
+.box6:hover .title {
+	transform: scale(1)
+}
+
+.box6 .icon li, .box6 .post {
+	opacity: 0;
+	transform: translateX(40px);
+	transition: all .35s ease 0s
+}
+
+.box6 .post {
+	display: block;
+	font-size: 14px;
+	color: #fff;
+	margin-bottom: 5px
+}
+
+.box6 .icon {
+	display: inline-block;
+	margin: 0
+}
+
+.box6:hover .icon li, .box6:hover .post {
+	opacity: 1;
+	transform: translateX(0)
+}
+
+.box6:hover .icon li:first-child {
+	transition-delay: .1s
+}
+
+.box6:hover .icon li:nth-child(2) {
+	transition-delay: .2s
+}
+
+.box6 .icon li a {
+	display: block;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	background: #fff;
+	font-size: 18px;
+	color: #605f5f;
+	margin-bottom: 5px;
+	transition: all .35s ease
+}
+
+.box6 .icon li a:hover {
+	background: #605f5f;
+	color: #fff
+}
+
+@media only screen and (max-width:990px) {
+	.box6 {
+		margin-bottom: 30px
+	}
+}
+
+/*********************** Demo - 7 *******************/
+</style>
 </head>
 <body>
-
-	<div class="container">
-
+	<header>
 
 
-	
 
-<form action="#" th:action="@{/saveProduct}" th:object="${product}"
-			method="POST">
-		<div> 
-		<input type="hidden" th:field="*{id}" />
-			<label for="Marque" class="col-sm-2 col-form-label">Marque</label>
-			<div class="col-sm-10">
-				<input type="text" class="form-control" id="Marque" th:field="*{marque}">
+
+
+		<div class="fixed-top " style="background: #F6F6F6;">
+			<!-- #F6F6F6 -->
+			<ul class="nav justify-content-center  ">
+				<h2 style="text-align: right;" class="navbar-brand">E-Shop</h2>
+
+				<li class="nav-item"><a class="nav-link active" href="/"
+					style="color: black;"><img
+						src="https://img.icons8.com/material-outlined/24/000000/home-page.png"
+						height="20px" //>&nbsp;&nbsp;الرئيسية</a></li>
+				<li class="nav-item"><a class="nav-link" href="#NewPhone"
+					style="color: black;"> <img
+						src="https://img.icons8.com/carbon-copy/64/000000/android.png"
+						height="20px" //>&nbsp;&nbsp;هواتف جديدة
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="#OldPhone"
+					style="color: black;"> <img
+						src="https://img.icons8.com/carbon-copy/100/000000/iphone-x.png"
+						height="20px" //>&nbsp;&nbsp;هواتف مستعملة
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="#Accecoires"
+					style="color: black;"><img
+						src="https://img.icons8.com/pastel-glyph/64/000000/apple-watch-apps.png"
+						height="20px" //>&nbsp;&nbsp;أكسسوارات</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="# wa.link/mhwx2v" style="color: black;"><img
+						src="https://img.icons8.com/pastel-glyph/64/000000/whatsapp--v2.png"
+						height="20px" />&nbsp; &nbsp;راسلنا</a></li>
+			</ul>
+		</div>
+	</header>
+
+
+
+
+	<div class="container " style="padding-top: 80px; font-family: Oswald;">
+		<div class="row" th:object="${product}">
+			<div class="col-sm-12 col-md-12 col-lg-8 pt-3 "
+				style="background-color: white;">
+				<img style="border-radius: 15px;"
+					th:src="@{'data:image/jpeg;base64,'+${product.image}}"
+					height="600px" width="670px" />
+
 			</div>
 
-			<label for="Nom" class="col-sm-2 col-form-label">Nom
-				d'apparail</label>
-			<div class="col-sm-10">
-				<input type="text" class="form-control" id="Nom" th:field="*{name}">
-			</div>
+			<div class="col-sm-12 col-md-12 col-lg-4 "
+				style="background-color: white;">
 
-			<label for="Color" class="col-sm-2 col-form-label">Color</label>
-			<div class="col-sm-10">
-				<input type="text" class="form-control" id="Color" th:field="*{color}">
-			</div>
+				<h2 align="center" th:text=" '[ NOUV ] '+${product.name}"
+					style="font-family: Oswald; font-size: 30px; text-transform: uppercase; line-height: 1.5; color: #333333; display: block; letter-spacing: 0px;"></h2>
 
 
+				<hr style="border: 1px solid #69C1FE;">
+				<h4 th:text=" ${product.price}+'  MAD'"></h4>
+				<br>
 
-			<label for="Prix" class="col-sm-2 col-form-label">Prix</label>
-			<div class="col-sm-10">
-				<input type="text" class="form-control" id="Prix" th:field="*{price}">
-			</div>
+				<ul>
+					<li><p style="width: 220px"
+							th:text=" 'Relased '+${product.released} +' ,'+${product.android} +'.'"></p></li>
+				</ul>
+				<ul>
+					<li><p>
+							<img
+						src="https://img.icons8.com/pastel-glyph/64/000000/apple-watch-apps.png"
+						height="20px" //><b th:text=" ${product.rom}+'GB'"></b> Stockage
+						</p></li>
 
-			<label for="Qte" class="col-sm-2 col-form-label">Quantite</label>
-			<div class="col-sm-10">
-				<input type="text" class="form-control" id="Qte"th:field="*{qte}">
-			</div>
+				</ul>
 
-			<label for="upload" class="col-sm-2 col-form-label">Upload
-				Picture</label>
-			<div class="col-sm-10">
-				<input type="file" class="form-control-file" id="upload">
-			</div>
+				<ul>
+					<li><p>
+							<b th:text=" ${product.ram}+'GB'"></b>Ram
+						</p></li>
+				</ul>
+
+				<ul>
+					<li><p>Frontal
+							<b th:text=" ${product.camFrontale}"></b>
+						</p> </li>
+
+				</ul>
+				<ul>
+					<li><p>Dorsale
+							<b th:text=" ${product.camDorsale}"></b>
+						</p> </li>
+
+				</ul>
+				<ul>
+					<li>
+						<p th:text=" ${product.battery}+'  Battry'"></p>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<p th:text=" ${product.color}+'  Color'"></p>
+					</li>
+				</ul>
+
+				<ul>
+					<li>
+						<p th:text=" ${product.processeur}+'  Performance'"></p>
+					</li>
+				</ul>
+
+				<ul>
+					<li>
+						<p th:text=" ${product.size}+'  Size'"></p>
+
+					</li>
+				</ul>
+
 		
-						<div class="col-sm-10" style="text-align: center">
-				<button type="submit" class="btn btn-primary">Poster le
-					produits</button>
+						<button type="button" style="background-color: #69C1FE; width: 180px">Commander </button>
+								
+				
+				
 			</div>
 		</div>
-
-
-</form>		
-
-		
-
-
 	</div>
 
 
@@ -71,16 +283,40 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>

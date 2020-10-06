@@ -34,16 +34,32 @@ public class EshopController {
 	}
 
 	@PostMapping("/saveNewPhone")
-	public String saveProduct(@RequestParam("file") MultipartFile file, @RequestParam("color") String color,
-			@RequestParam("marque") String marque, @RequestParam("name") String name,
-			@RequestParam("price") float price, @RequestParam("qte") int qte, @RequestParam("size") String size
+	public String saveProduct(@RequestParam("file") MultipartFile file,
+			@RequestParam("color") String color,
+			@RequestParam("marque") String marque, 
+			@RequestParam("name") String name,
+			@RequestParam("price") float price,
+			@RequestParam("qte") int qte,
+			@RequestParam("size") String size,
+			@RequestParam("released") String released,
+			@RequestParam("processeur") String processeur,
+			@RequestParam("ram") int ram, 
+			@RequestParam("rom") int rom, @RequestParam("android") String android,
+			@RequestParam("battery") String battery,
+			@RequestParam("camfrontale") String camfrontale,
+			@RequestParam("camDorsale") String camDorsale
+			
+		
 	/* @ModelAttribute("newPhone") EshopProduct newPhone */) {
-		
-		
-		productService.createNewPhone(file, color, marque, name, price, qte, size);
+
+		productService.createNewPhone(file, color, marque, name, price, qte, size, released, processeur, ram, rom,
+				android, battery,camfrontale,camDorsale);
 		// productService.createNewPhone(newPhone);
 		return "redirect:/";
 	}
+
+	
+	
 	@GetMapping("/showProduct/{id}")
 	public String updateProduct(@PathVariable(value = "id") Long id, Model model) {
 		EshopProduct product = productService.getProductById(id);

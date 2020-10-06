@@ -22,7 +22,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style type="text/css">
 .nav-item a:hover {
-	background: #beef00;
+	background: #69C1FE;
 	color: white;
 	border-radius: 10px;
 }
@@ -136,7 +136,7 @@ height: 100%;
 	</div>
 <!-- _______________________________	Fin slider -->
 	<div class="container pt-5">
-<center><h1 style="color: #beef00">❕ اخترنا لك</h1></center>
+<center><h1 style="color: #69C1FE">❕ اخترنا لك</h1></center>
 
 <!-- __________________Afficher Les nouveau smart phone _________________ -->
 <div class="row">
@@ -148,8 +148,8 @@ height: 100%;
                             <h3 th:text="${NewPhone.name}"></h3>
 
 					
-						<h6 class="title pt-3" style="color: #beef00" th:text=" ${NewPhone.price} +'  Dhs'"></h6>
-						<a  href="#"  class="btn title " style="color: red"><img alt="Voir plus" src="https://media3.giphy.com/media/kGp8rGjIvHAeT0VRMX/200w.gif"> </a>
+						<h6 class="title pt-3" style="color: #69C1FE" th:text=" ${NewPhone.price} +'  Dhs'"></h6>
+						<a   th:href="@{/showProduct/{id}(id=${NewPhone.id})}"  class="btn title " ><img alt="Voir plus" src="https://media3.giphy.com/media/kGp8rGjIvHAeT0VRMX/200w.gif"> </a>
 					</div>
 				</div>
 			</div>
