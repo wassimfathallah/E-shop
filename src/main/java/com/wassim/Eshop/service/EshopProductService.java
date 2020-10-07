@@ -8,7 +8,7 @@ import com.wassim.Eshop.model.EshopProduct;
 
 
 public interface EshopProductService {
-	void createNewPhone(MultipartFile file, String color,String marque,String name,float price,int qte,String size,
+	void createNewPhone(MultipartFile file, String color,String marque,String name,float price,int qte,int size,
 			
 
 			 String released,

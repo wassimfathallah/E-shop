@@ -22,7 +22,7 @@ public class EshopProductServiceImpl implements EshopProductService {
 
 	@Override
 	public void createNewPhone(MultipartFile file, String color, String marque, String name, float price, int qte,
-			String size, String released, String processeur, int ram, int rom, String android, String battery,String camfrontale,
+			int size, String released, String processeur, int ram, int rom, String android, String battery,String camfrontale,
 			String camDorsale) {
 
 		EshopProduct product = new EshopProduct();

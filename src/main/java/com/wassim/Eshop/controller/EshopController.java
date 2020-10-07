@@ -40,7 +40,7 @@ public class EshopController {
 			@RequestParam("name") String name,
 			@RequestParam("price") float price,
 			@RequestParam("qte") int qte,
-			@RequestParam("size") String size,
+			@RequestParam("size") int size,
 			@RequestParam("released") String released,
 			@RequestParam("processeur") String processeur,
 			@RequestParam("ram") int ram, 

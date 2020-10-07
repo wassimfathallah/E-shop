@@ -18,7 +18,7 @@ public class EshopProduct {
 	private float price;
 
 	private String color;
-	private String size;
+	private int size;
 	private int qte;
 	
 	private String released;
@@ -62,10 +62,10 @@ public class EshopProduct {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	public String getSize() {
+	public int getSize() {
 		return size;
 	}
-	public void setSize(String size) {
+	public void setSize(int size) {
 		this.size = size;
 	}
 	public int getQte() {
@@ -132,7 +132,7 @@ public class EshopProduct {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public EshopProduct(String name, String marque, float price, String color, String size, int qte, String released,
+	public EshopProduct(String name, String marque, float price, String color, int size, int qte, String released,
 			String processeur, int ram, int rom, String android, String battery, String camDorsale, String camFrontale,
 			String image) {
 		super();

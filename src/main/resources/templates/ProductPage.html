@@ -212,66 +212,132 @@ body {
 				<h4 th:text=" ${product.price}+'  MAD'"></h4>
 				<br>
 
-				<ul>
-					<li><p style="width: 220px"
-							th:text=" 'Relased '+${product.released} +' ,'+${product.android} +'.'"></p></li>
+				<ul style="list-style: none;">
+					<li><p style="width: 220px ;color:#69C1FE;">
+							<img th:src="@{/images/release.png}" height="20px" />&nbsp;&nbsp; Relased :
+							<b style="font-family: Roboto;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: none;
+    color: #333333;
+    line-height: 1.6em;"
+								th:text=" ${product.released} +' ,'+${product.android} +'.'"></b >
+						</p></li>
 				</ul>
-				<ul>
-					<li><p>
-							<img
-						src="https://img.icons8.com/pastel-glyph/64/000000/apple-watch-apps.png"
-						height="20px" //><b th:text=" ${product.rom}+'GB'"></b> Stockage
+					<ul style="list-style: none;">
+					<li>
+						<p style="color:#69C1FE">
+							<img th:src="@{/images/processeur.png}" height="20px" />&nbsp;&nbsp; Processeur :<b style="font-family: Roboto;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: none;
+    color: #333333;
+    line-height: 1.6em;"
+								th:text=" ${product.processeur}"></b>
+						</p>
+					</li>
+				</ul>
+				<ul style="list-style: none;">
+					<li><p style="color:#69C1FE">
+							<img th:src="@{/images/rom.png}" height="20px" /> &nbsp;&nbsp;  Stockage :<b style="font-family: Roboto;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: none;
+    color: #333333;
+    line-height: 1.6em;"
+								th:text=" ${product.rom}+' GB'"></b> 
 						</p></li>
 
 				</ul>
 
-				<ul>
-					<li><p>
-							<b th:text=" ${product.ram}+'GB'"></b>Ram
+				<ul style="list-style: none;">
+					<li><p style="color:#69C1FE">
+							<img th:src="@{/images/chip.png}" height="20px" /> &nbsp;&nbsp; RAM : <b style="font-family: Roboto;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: none;
+    color: #333333;
+    line-height: 1.6em;"
+								th:text=" ${product.ram}+ '  GB'"></b>
 						</p></li>
 				</ul>
 
-				<ul>
-					<li><p>Frontal
-							<b th:text=" ${product.camFrontale}"></b>
-						</p> </li>
+				<ul style="list-style: none;">
+					<li><p style="color:#69C1FE">
+							<img th:src="@{/images/selfie-stick.png}" height="20px" />  &nbsp;&nbsp;   Frontal  :<b style="font-family: Roboto;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: none;
+    color: #333333;
+    line-height: 1.6em;"
+								th:text=" ${product.camFrontale}"></b>
+						</p></li>
 
 				</ul>
-				<ul>
-					<li><p>Dorsale
-							<b th:text=" ${product.camDorsale}"></b>
-						</p> </li>
+				<ul style="list-style: none;">
+					<li><p style="color:#69C1FE">
+							<img th:src="@{/images/mobile-camera.png}" height="20px" /> &nbsp;&nbsp;  Dorsale  : <b style="font-family: Roboto;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: none;
+    color: #333333;
+    line-height: 1.6em;"
+								th:text=" ${product.camDorsale}"></b>
+						</p></li>
 
 				</ul>
-				<ul>
+				<ul style="list-style: none;">
 					<li>
-						<p th:text=" ${product.battery}+'  Battry'"></p>
+						<p style="color:#69C1FE">
+							<img th:src="@{/images/battery-charge.png}" height="20px" />&nbsp;&nbsp;Battrie : <b style="font-family: Roboto;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: none;
+    color: #333333;
+    line-height: 1.6em;"
+								th:text=" ${product.battery}+'  mAh'"></b> 
+						</p>
 					</li>
 				</ul>
-				<ul>
+				<ul style="list-style: none;">
 					<li>
-						<p th:text=" ${product.color}+'  Color'"></p>
+						<p style="color:#69C1FE">
+							<img th:src="@{/images/color-circle.png}" height="20px" /> &nbsp;&nbsp; Coleur : <b style="font-family: Roboto;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: none;
+    color: #333333;
+    line-height: 1.6em;"
+								th:text=" ${product.color}"></b>
+						</p>
 					</li>
 				</ul>
 
-				<ul>
+			
+
+
+
+			<ul style="list-style: none;">
 					<li>
-						<p th:text=" ${product.processeur}+'  Performance'"></p>
+						<p style="color:#69C1FE">
+							<img th:src="@{/images/size.png}" height="20px" /> &nbsp;&nbsp; Display : <b style="font-family: Roboto;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: none;
+    color: #333333;
+    line-height: 1.6em;"
+								th:text=" ${product.size} +' (' +${product.size*2.25} +' Cm )'"></b>
+						</p>
 					</li>
 				</ul>
 
-				<ul>
-					<li>
-						<p th:text=" ${product.size}+'  Size'"></p>
 
-					</li>
-				</ul>
+				<div class="col-sm-10 pt-4" style="text-align: center">
+<button type="button" class="btn btn-info">COMMANDER ICI - أطلب الآن</button>
+					
+				</div>
+				<hr style="border: 1px solid #69C1FE;">
 
-		
-						<button type="button" style="background-color: #69C1FE; width: 180px">Commander </button>
-								
-				
-				
 			</div>
 		</div>
 	</div>
