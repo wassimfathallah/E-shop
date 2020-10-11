@@ -21,23 +21,176 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+<link href="/your-path-to-fontawesome/css/fontawesome.css"
+	rel="stylesheet">
+<link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+<link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
 <style type="text/css">
-.nav-item a:hover {
-	background: #69C1FE;
-	color: white;
-	border-radius: 10px;
-}
+/* navbar */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-	/* 	background-image: */
-	/* 		url("https://i0.wp.com/www.cssscript.com/wp-content/uploads/2017/12/Animated-Particles-Background.png?fit=499%2C386&ssl=1"); */
-	/* 	height: 100%; */
-	
+	font-family: 'Roboto', sans-serif;
 }
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+i {
+	margin-right: 10px;
+}
+/*----------multi-level-accordian-menu------------*/
+.navbar-logo {
+	padding: 15px;
+	color: #fff;
+}
+
+.navbar-mainbg {
+	background-color: #5161ce;
+	padding: 0px;
+}
+
+#navbarSupportedContent {
+	overflow: hidden;
+	position: relative;
+}
+
+#navbarSupportedContent ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+#navbarSupportedContent ul li a i {
+	margin-right: 10px;
+}
+
+#navbarSupportedContent li {
+	list-style-type: none;
+	float: left;
+}
+
+#navbarSupportedContent ul li a {
+	color: rgba(255, 255, 255, 0.5);
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+	padding: 20px 20px;
+	transition-duration: 0.6s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	position: relative;
+}
+
+#navbarSupportedContent>ul>li.active>a {
+	color: #5161ce;
+	background-color: transparent;
+	transition: all 0.7s;
+}
+
+#navbarSupportedContent a:not (:only-child ):after {
+	content: "\f105";
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	font-size: 14px;
+	font-family: "Font Awesome 5 Free";
+	display: inline-block;
+	padding-right: 3px;
+	vertical-align: middle;
+	font-weight: 900;
+	transition: 0.5s;
+}
+
+#navbarSupportedContent .active>a:not (:only-child ):after {
+	transform: rotate(90deg);
+}
+
+.hori-selector {
+	display: inline-block;
+	position: absolute;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	transition-duration: 0.6s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	background-color: #fff;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	margin-top: 10px;
+}
+
+.hori-selector .right, .hori-selector .left {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background-color: #fff;
+	bottom: 10px;
+}
+
+.hori-selector .right {
+	right: -25px;
+}
+
+.hori-selector .left {
+	left: -25px;
+}
+
+.hori-selector .right:before, .hori-selector .left:before {
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #5161ce;
+}
+
+.hori-selector .right:before {
+	bottom: 0;
+	right: -25px;
+}
+
+.hori-selector .left:before {
+	bottom: 0;
+	left: -25px;
+}
+
+@media ( max-width : 991px) {
+	#navbarSupportedContent ul li a {
+		padding: 12px 30px;
+	}
+	.hori-selector {
+		margin-top: 0px;
+		margin-left: 10px;
+		border-radius: 0;
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+	}
+	.hori-selector .left, .hori-selector .right {
+		right: 10px;
+	}
+	.hori-selector .left {
+		top: -25px;
+		left: auto;
+	}
+	.hori-selector .right {
+		bottom: -25px;
+	}
+	.hori-selector .left:before {
+		left: -25px;
+		top: -25px;
+	}
+	.hori-selector .right:before {
+		bottom: -25px;
+		left: -25px;
+	}
+}
+
+/* ---------------------- */
 /*********************** Demo - 6 *******************/
 .box6 {
 	background: #000;
@@ -247,47 +400,84 @@ body {
 </style>
 </head>
 <body>
-	<header>
-
-
-
-
-
-		<div class="fixed-top " style="background: #F6F6F6;">
-			<!-- #F6F6F6 -->
-			<ul class="nav justify-content-center  ">
-				<h2 style="text-align: right;" class="navbar-brand">E-Shop</h2>
-
-				<li class="nav-item"><a class="nav-link active" href="/"
-					style="color: black;"><img
-						src="https://img.icons8.com/material-outlined/24/000000/home-page.png"
-						height="20px" //>&nbsp;&nbsp;الرئيسية</a></li>
-				<li class="nav-item"><a class="nav-link" href="#NewPhone"
-					style="color: black;"> <img
-						src="https://img.icons8.com/carbon-copy/64/000000/android.png"
-						height="20px" //>&nbsp;&nbsp;هواتف جديدة
-				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#OldPhone"
-					style="color: black;"> <img
-						src="https://img.icons8.com/carbon-copy/100/000000/iphone-x.png"
-						height="20px" //>&nbsp;&nbsp;هواتف مستعملة
-				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#Accecoires"
-					style="color: black;"><img
-						src="https://img.icons8.com/pastel-glyph/64/000000/apple-watch-apps.png"
-						height="20px" //>&nbsp;&nbsp;أكسسوارات</a></li>
+	<nav class="navbar navbar-expand-lg navbar-mainbg fixed-top">
+		<a class="navbar-brand navbar-logo" href="#">E-Shop</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<i class="fas fa-bars text-white"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<div class="hori-selector">
+					<div class="left"></div>
+					<div class="right"></div>
+				</div>
+				<li class="nav-item"><a class="nav-link" href="#"><svg
+							width="1em" height="1em" viewBox="0 0 16 16"
+							class="bi bi-telephone-fill" fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+								d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z" />
+</svg>&nbsp;&nbsp;راسلنا</a></li>
+				<li class="nav-item "><a class="nav-link"
+					href="javascript:void(0);"><svg width="1em" height="1em"
+							viewBox="0 0 16 16" class="bi bi-smartwatch" fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg">
+  <path d="M14 5h.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H14V5z" />
+  <path fill-rule="evenodd"
+								d="M8.5 4.5A.5.5 0 0 1 9 5v3.5a.5.5 0 0 1-.5.5H6a.5.5 0 0 1 0-1h2V5a.5.5 0 0 1 .5-.5z" />
+  <path fill-rule="evenodd"
+								d="M4.5 2h7A2.5 2.5 0 0 1 14 4.5v7a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2zm0 1A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7z" />
+  <path
+								d="M4 2.05v-.383C4 .747 4.746 0 5.667 0h4.666C11.253 0 12 .746 12 1.667v.383a2.512 2.512 0 0 0-.5-.05h-7c-.171 0-.338.017-.5.05zm0 11.9c.162.033.329.05.5.05h7c.171 0 .338-.017.5-.05v.383c0 .92-.746 1.667-1.667 1.667H5.667C4.747 16 4 15.254 4 14.333v-.383z" />
+</svg>&nbsp;&nbsp;أكسسوارات</a></li>
 				<li class="nav-item"><a class="nav-link"
-					href="# wa.link/mhwx2v" style="color: black;"><img
-						src="https://img.icons8.com/pastel-glyph/64/000000/whatsapp--v2.png"
-						height="20px" />&nbsp; &nbsp;راسلنا</a></li>
+					href="javascript:void(0);"><svg width="1em" height="1em"
+							viewBox="0 0 16 16" class="bi bi-tablet-landscape"
+							fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+								d="M1 4v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1zm-1 8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8z" />
+  <path fill-rule="evenodd" d="M14 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0z" />
+</svg>&nbsp;&nbsp;هواتف جديدة</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="javascript:void(0);"><svg width="1em" height="1em"
+							viewBox="0 0 16 16" class="bi bi-phone" fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+								d="M11 1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+  <path fill-rule="evenodd" d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+</svg> &nbsp;&nbsp;هواتف مستعملة</a></li>
+				<li class="nav-item active"><a class="nav-link" href="/"><svg
+							width="1em" height="1em" viewBox="0 0 16 16"
+							class="bi bi-house-door" fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+								d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z" />
+  <path fill-rule="evenodd"
+								d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+</svg>&nbsp;&nbsp;الرئيسية </a></li>
+
 			</ul>
 		</div>
-	</header>
+	</nav>
 
+	<nav aria-label="breadcrumb" style="padding-top: 100px;">
+		<ol class="breadcrumb" style="background-color: white;">
+			<li class="breadcrumb-item"><a href="#">Home</a></li>
+			<li class="breadcrumb-item"><a href="#">Library</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Data</li>
+		</ol>
+	</nav>
 
-
-
-	<div class="container " style="padding-top: 80px; font-family: Oswald;">
+	<div class="container "
+		style="padding-top: 100px; font-family: Roboto;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: none;
+    color: #333333;
+    line-height: 1.6em;">
 		<div class="row" th:object="${product}">
 			<div class="col-sm-12-justify col-md-12 col-lg-8 pt-3 "
 				style="background-color: white;">
@@ -309,27 +499,46 @@ body {
 				<br>
 
 				<ul style="list-style: none;">
-					<li><p style="width: 220px; color: #69C1FE;">
-							<img th:src="@{/images/release.png}" height="20px" />&nbsp;&nbsp;
-							Relased : <b
+					<li><p style="width: 220px; color: #5161ce;">
+							<svg width="1em" height="1em" viewBox="0 0 16 16"
+								class="bi bi-calendar-day-fill" fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+									d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-4.785-6.145a.425.425 0 0 1-.43-.425c0-.242.192-.43.43-.43a.428.428 0 1 1 0 .855zm.336.563v4.105h-.672V8.418h.672zm-6.867 4.105v-2.3h2.261v-.61H4.684V7.801h2.464v-.61H4v5.332h.684zm3.296 0h.676V9.98c0-.554.227-1.007.953-1.007.125 0 .258.004.329.015v-.613a1.806 1.806 0 0 0-.254-.02c-.582 0-.891.32-1.012.567h-.02v-.504H7.98v4.105z" />
+</svg>
+							&nbsp;&nbsp; Relased : <b
 								style="font-family: Roboto; font-weight: normal; font-size: 15px; text-transform: none; color: #333333; line-height: 1.6em;"
 								th:text=" ${product.released} +' ,'+${product.android} +'.'"></b>
 						</p></li>
 				</ul>
 				<ul style="list-style: none;">
 					<li>
-						<p style="color: #69C1FE">
-							<img th:src="@{/images/processeur.png}" height="20px" />&nbsp;&nbsp;
-							Processeur :<b
+						<p style="color: #5161ce">
+							<svg width="1em" height="1em" viewBox="0 0 16 16"
+								class="bi bi-cpu-fill" fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+									d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5A1.5 1.5 0 0 0 5 6.5v3A1.5 1.5 0 0 0 6.5 11h3A1.5 1.5 0 0 0 11 9.5v-3A1.5 1.5 0 0 0 9.5 5h-3zm0 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+</svg>
+							&nbsp;&nbsp; Processeur :<b
 								style="font-family: Roboto; font-weight: normal; font-size: 15px; text-transform: none; color: #333333; line-height: 1.6em;"
 								th:text=" ${product.processeur}"></b>
 						</p>
 					</li>
 				</ul>
 				<ul style="list-style: none;">
-					<li><p style="color: #69C1FE">
-							<img th:src="@{/images/rom.png}" height="20px" /> &nbsp;&nbsp;
-							Stockage :<b
+					<li><p style="color: #5161ce">
+							<svg width="1em" height="1em" viewBox="0 0 16 16"
+								class="bi bi-hdd" fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+									d="M14 9H2a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1zM2 8a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2H2z" />
+  <path
+									d="M5 10.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-2 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+  <path fill-rule="evenodd"
+									d="M4.094 4a.5.5 0 0 0-.44.26l-2.47 4.532A1.5 1.5 0 0 0 1 9.51v.99H0v-.99c0-.418.105-.83.305-1.197l2.472-4.531A1.5 1.5 0 0 1 4.094 3h7.812a1.5 1.5 0 0 1 1.317.782l2.472 4.53c.2.368.305.78.305 1.198v.99h-1v-.99a1.5 1.5 0 0 0-.183-.718L12.345 4.26a.5.5 0 0 0-.439-.26H4.094z" />
+</svg>
+							&nbsp;&nbsp; Stockage :<b
 								style="font-family: Roboto; font-weight: normal; font-size: 15px; text-transform: none; color: #333333; line-height: 1.6em;"
 								th:text=" ${product.rom}+' GB'"></b>
 						</p></li>
@@ -337,17 +546,31 @@ body {
 				</ul>
 
 				<ul style="list-style: none;">
-					<li><p style="color: #69C1FE">
-							<img th:src="@{/images/chip.png}" height="20px" /> &nbsp;&nbsp;
-							RAM : <b
+					<li><p style="color: #5161ce">
+							<svg width="1em" height="1em" viewBox="0 0 16 16"
+								class="bi bi-cpu" fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+									d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+</svg>
+							&nbsp;&nbsp; RAM : <b
 								style="font-family: Roboto; font-weight: normal; font-size: 15px; text-transform: none; color: #333333; line-height: 1.6em;"
 								th:text=" ${product.ram}+ '  GB'"></b>
 						</p></li>
 				</ul>
 
 				<ul style="list-style: none;">
-					<li><p style="color: #69C1FE">
-							<img th:src="@{/images/selfie-stick.png}" height="20px" />
+					<li><p style="color: #5161ce">
+							<svg width="1em" height="1em" viewBox="0 0 16 16"
+								class="bi bi-emoji-smile" fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd"
+									d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+  <path fill-rule="evenodd"
+									d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683z" />
+  <path
+									d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
+</svg>
 							&nbsp;&nbsp; Frontal :<b
 								style="font-family: Roboto; font-weight: normal; font-size: 15px; text-transform: none; color: #333333; line-height: 1.6em;"
 								th:text=" ${product.camFrontale}"></b>
@@ -355,8 +578,14 @@ body {
 
 				</ul>
 				<ul style="list-style: none;">
-					<li><p style="color: #69C1FE">
-							<img th:src="@{/images/mobile-camera.png}" height="20px" />
+					<li><p style="color: #5161ce">
+							<svg width="1em" height="1em" viewBox="0 0 16 16"
+								class="bi bi-camera-fill" fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
+  <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+  <path fill-rule="evenodd"
+									d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z" />
+</svg>
 							&nbsp;&nbsp; Dorsale : <b
 								style="font-family: Roboto; font-weight: normal; font-size: 15px; text-transform: none; color: #333333; line-height: 1.6em;"
 								th:text=" ${product.camDorsale}"></b>
@@ -365,9 +594,17 @@ body {
 				</ul>
 				<ul style="list-style: none;">
 					<li>
-						<p style="color: #69C1FE">
-							<img th:src="@{/images/battery-charge.png}" height="20px" />&nbsp;&nbsp;Battrie
-							: <b
+						<p style="color: #5161ce">
+							<svg width="1em" height="1em" viewBox="0 0 16 16"
+								class="bi bi-battery-charging" fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
+  <path d="M14.5 9.5a1.5 1.5 0 0 0 0-3v3z" />
+  <path fill-rule="evenodd"
+									d="M9.585 2.568a.5.5 0 0 1 .226.58L8.677 6.832h1.99a.5.5 0 0 1 .364.843l-5.334 5.667a.5.5 0 0 1-.842-.49L5.99 9.167H4a.5.5 0 0 1-.364-.843l5.333-5.667a.5.5 0 0 1 .616-.09z" />
+  <path fill-rule="evenodd"
+									d="M6.332 4H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2.072l.307-1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h3.391l.941-1zM4.45 6H2v4h1.313a1.5 1.5 0 0 1-.405-2.361L4.45 6zm.976 5l-.308 1H6.96l.21-.224h.001l.73-.776H6.53l-.085.09.028-.09H5.426zm1.354-1H5.733l.257-.833H4a.5.5 0 0 1-.364-.843l.793-.843L5.823 6h1.373L5.157 8.167h1.51a.5.5 0 0 1 .478.647L6.78 10zm.69 0h1.374l1.394-1.482.793-.842a.5.5 0 0 0-.364-.843h-1.99L8.933 6H7.887l-.166.54-.199.646A.5.5 0 0 0 8 7.833h1.51L7.47 10zm.725-5H9.24l.308-1H7.706l-.942 1h1.374l.085-.09-.028.09zm2.4-1l-.308 1H12a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H9.276l-.942 1H12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.405zm-.378 6H12V8.02a1.499 1.499 0 0 1-.241.341L10.217 10zM12 6.646V6h-.646a1.5 1.5 0 0 1 .646.646z" />
+</svg>
+							&nbsp;&nbsp;Battrie : <b
 								style="font-family: Roboto; font-weight: normal; font-size: 15px; text-transform: none; color: #333333; line-height: 1.6em;"
 								th:text=" ${product.battery}+'  mAh'"></b>
 						</p>
@@ -375,8 +612,13 @@ body {
 				</ul>
 				<ul style="list-style: none;">
 					<li>
-						<p style="color: #69C1FE">
-							<img th:src="@{/images/color-circle.png}" height="20px" />
+						<p style="color: #5161ce">
+							<svg width="1em" height="1em" viewBox="0 0 16 16"
+								class="bi bi-easel-fill" fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
+  <path
+									d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2h2.092L8.473.337zM12.15 11h-1.058l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11zM8.5 11h-1v2.5a.5.5 0 0 0 1 0V11zm-3.592 0H3.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11zM1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3z" />
+</svg>
 							&nbsp;&nbsp; Coleur : <b
 								style="font-family: Roboto; font-weight: normal; font-size: 15px; text-transform: none; color: #333333; line-height: 1.6em;"
 								th:text=" ${product.color}"></b>
@@ -390,9 +632,16 @@ body {
 
 				<ul style="list-style: none;">
 					<li>
-						<p style="color: #69C1FE">
-							<img th:src="@{/images/size.png}" height="20px" /> &nbsp;&nbsp;
-							Display : <b
+						<p style="color: #5161ce">
+							<svg width="1em" height="1em" viewBox="0 0 16 16"
+								class="bi bi-display" fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
+  <path
+									d="M5.75 13.5c.167-.333.25-.833.25-1.5h4c0 .667.083 1.167.25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75z" />
+  <path fill-rule="evenodd"
+									d="M13.991 3H2c-.325 0-.502.078-.602.145a.758.758 0 0 0-.254.302A1.46 1.46 0 0 0 1 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 0 0 .254-.302 1.464 1.464 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 0 0-.302-.254A1.46 1.46 0 0 0 13.99 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z" />
+</svg>
+							&nbsp;&nbsp; Display : <b
 								style="font-family: Roboto; font-weight: normal; font-size: 15px; text-transform: none; color: #333333; line-height: 1.6em;"
 								th:text=" ${product.size} +' (' +${product.size*2.25} +' Cm )'"></b>
 						</p>
@@ -406,26 +655,27 @@ body {
 						readonly />
 					<div class="input-group-btn-vertical">
 						<button class="btn btn-info"
-							style="height: 50%; background-color: #69C1FE; border: none;"
+							style="height: 50%; background-color: #5161ce; border: none;"
 							type="button">
 							<i class="fa fa-plus"></i>
 						</button>
 
 						<button class="btn btn-info"
-							style="height: 55%; background-color: #69C1FE; border: none;"
+							style="height: 55%; background-color: #5161ce; border: none;"
 							type="button">
 							<i class="fa fa-minus"></i>
 						</button>
 					</div>
 
 					&nbsp;&nbsp;&nbsp;&nbsp;
-					<button type="button" id="popup"
-						class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg"
-						style="text-align: center; background-color: #69C1FE">COMMANDER
+					<button type="button" id="popup" class="btn btn-info"
+						data-toggle="modal" data-target=".bd-example-modal-lg"
+						style="text-align: center; background-color: #5161ce">COMMANDER
 						ICI - أطلب الآن</button>
 
 				</div>
-				<hr style="border: 1px solid #69C1FE;">
+				<hr style="border: 1px solid #5161ce;">
+
 
 
 
@@ -445,24 +695,24 @@ body {
 
 
 
-<div class="modal fade bd-example-modal-lg bg-light"  
-     tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-  
-    <div class="modal-content">
-           <div class="modal-header">
-        <h5 class="modal-title "  id="exampleModalLabel">قدم طلبك</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
- 
-<div class="row" th:object="${product}">
+			<div class="modal fade bd-example-modal-lg bg-light" tabindex="-1"
+				role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title " id="exampleModalLabel">قدم طلبك</h5>
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+
+						<div class="row" th:object="${product}">
 							<div class="col-sm-6-justify col-md-4 col-lg-4 pt-3 ">
 								<img style="border-radius: 15px;"
 									class="img-fluid img-thumbnail"
-									th:src="@{'data:image/jpeg;base64,'+${product.image}}"
-									  />
+									th:src="@{'data:image/jpeg;base64,'+${product.image}}" />
 								<h4 th:text=" 'Total :'+${product.price}"></h4>
 
 
@@ -474,14 +724,15 @@ body {
 								<h2 align="center" th:text=" '[ NOUV ] '+${product.name}"
 									style="font-family: Oswald; font-size: 15px; text-transform: uppercase; line-height: 1.5; color: #333333; display: block; letter-spacing: 0px;"></h2>
 								<h4 th:text=" ${product.price}+'  Dh '"></h4>
-												<hr style="border: 1px solid #69C1FE;">
-								
+								<hr style="border: 1px solid #5161ce;">
+
 							</div>
 							<div class="col-sm-12 col-md-12 col-lg-4 "
 								style="background-color: white;">
 
 								<form>
-								 <h5 class="card-title pt-3" style="color:#69C1FE">استمارة الطلب</h5>
+									<h5 class="card-title pt-3" style="color: #5161ce">استمارة
+										الطلب</h5>
 									<div class="row pt-2">
 										<div class="col">
 
@@ -517,17 +768,11 @@ body {
 									<div class="row pt-5">
 										<div class="col">
 
-											<center>
-											
-											
-											
-																<button type="button" 
-						class="btn btn-info"
-						style="text-align: center; background-color: #69C1FE">قدم الطلب</button>
-						
-					
 
-											</center>
+											<button type="button" class="btn btn-info"
+												style="text-align: center; background-color: #5161ce">قدم
+												الطلب</button>
+
 										</div>
 									</div>
 
@@ -539,88 +784,126 @@ body {
 
 
 
-						</div>     </div>
-  </div>
-</div>
-			<!-- 			--------------------- SCripts -->
-			<!-- 	get value of qte -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 			--------------------- SCripts -->
+
+	<script type="text/javascript">
+		// ---------Responsive-navbar-active-animation-----------
+		function test() {
+			var tabsNewAnim = $('#navbarSupportedContent');
+			var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+			var activeItemNewAnim = tabsNewAnim.find('.active');
+			var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+			var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+			var itemPosNewAnimTop = activeItemNewAnim.position();
+			var itemPosNewAnimLeft = activeItemNewAnim.position();
+			$(".hori-selector").css({
+				"top" : itemPosNewAnimTop.top + "px",
+				"left" : itemPosNewAnimLeft.left + "px",
+				"height" : activeWidthNewAnimHeight + "px",
+				"width" : activeWidthNewAnimWidth + "px"
+			});
+			$("#navbarSupportedContent").on("click", "li", function(e) {
+				$('#navbarSupportedContent ul li').removeClass("active");
+				$(this).addClass('active');
+				var activeWidthNewAnimHeight = $(this).innerHeight();
+				var activeWidthNewAnimWidth = $(this).innerWidth();
+				var itemPosNewAnimTop = $(this).position();
+				var itemPosNewAnimLeft = $(this).position();
+				$(".hori-selector").css({
+					"top" : itemPosNewAnimTop.top + "px",
+					"left" : itemPosNewAnimLeft.left + "px",
+					"height" : activeWidthNewAnimHeight + "px",
+					"width" : activeWidthNewAnimWidth + "px"
+				});
+			});
+		}
+		$(document).ready(function() {
+			setTimeout(function() {
+				test();
+			});
+		});
+		$(window).on('resize', function() {
+			setTimeout(function() {
+				test();
+			}, 500);
+		});
+		$(".navbar-toggler").click(function() {
+			setTimeout(function() {
+				test();
+			});
+		});
+	</script>
+	<!-- 	get value of qte -->
 
 
-			<script type="text/javascript">
-				function qte() {
-					var src = document.getElementById("getQte");
-					document.getElementById("destinationTextField").innerHTML = src.value;
-					//     dest.value=src.value; 
+	<script type="text/javascript">
+		function qte() {
+			var src = document.getElementById("getQte");
+			document.getElementById("destinationTextField").innerHTML = src.value;
+			//     dest.value=src.value; 
 
-				}
-			</script>
+		}
+	</script>
 
 
 
-	
-			</script>
-			<!-- Qte -->
-			<script type="text/javascript">
-				(
-						function($) {
-							$('.spinner .btn:first-of-type')
-									.on(
-											'click',
-											function() {
-												var input = $(this).parent()
-														.parent().children(
-																'input');
-												input.val(parseInt(input.val(),
-														10) + 1);
-											});
-							$('.spinner .btn:last-of-type')
-									.on(
-											'click',
-											function() {
-												var input = $(this).parent()
-														.parent().children(
-																'input');
-												var newvalue = parseInt(input
-														.val(), 10) - 1;
-												if (newvalue >= 1)
-													input.val(newvalue);
-											});
-						})(jQuery);
-			</script>
-			<script
-				src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-				integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-				crossorigin="anonymous"></script>
-			<!-- Latest compiled and minified CSS -->
-			<link rel="stylesheet"
-				href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-			<!-- jQuery library -->
-			<script
-				src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-			<!-- Popper JS -->
-			<script
-				src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-			<!-- Latest compiled JavaScript -->
-			<script
-				src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-				integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-				crossorigin="anonymous"></script>
-			<script
-				src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-				integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-				crossorigin="anonymous"></script>
-			<script
-				src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-				integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-				crossorigin="anonymous"></script>
-			<script
-				src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-			<script
-				src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-			<script
-				src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-			<script type="text/javascript"
-				src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	</script>
+	<!-- Qte -->
+	<script type="text/javascript">
+		(function($) {
+			$('.spinner .btn:first-of-type').on('click', function() {
+				var input = $(this).parent().parent().children('input');
+				input.val(parseInt(input.val(), 10) + 1);
+			});
+			$('.spinner .btn:last-of-type').on('click', function() {
+				var input = $(this).parent().parent().children('input');
+				var newvalue = parseInt(input.val(), 10) - 1;
+				if (newvalue >= 1)
+					input.val(newvalue);
+			});
+		})(jQuery);
+	</script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>
